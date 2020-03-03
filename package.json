@@ -30,7 +30,9 @@
 		"test": "jest",
 		"build": "tsc --build",
 		"commit": "git-cz",
-		"prepare": "npm run build"
+		"prepare": "npm run build",
+		"prepack": "[ ! -f .buildme ] || npm run build",
+		"preinstall": "[ ! -f .buildme ] || npm run build"
 	},
 	"dependencies": {
 		"detect-indent": "^6.0.0",
