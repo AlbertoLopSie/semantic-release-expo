@@ -1,5 +1,5 @@
 {
-	"name": "semantic-release-expo",
+	"name": "@digicard/semantic-release-expo",
 	"version": "2.2.3",
 	"description": "An Expo implementation for semantic release, so you don't have to bother",
 	"keywords": [
@@ -12,13 +12,22 @@
 	],
 	"author": "Cedric van Putten <me@bycedric.com>",
 	"license": "MIT",
-	"homepage": "https://github.com/bycedric/semantic-release-expo#readme",
+	"homepage": "https://github.com/AlbertoLopSie/semantic-release-expo#readme",
+	"__homepage": "https://github.com/bycedric/semantic-release-expo#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bycedric/semantic-release-expo.git"
+		"url": "git@gitlab.com:digicard/packages/semantic-release-expo.git",
+		"__url": "https://github.com/bycedric/semantic-release-expo.git"
 	},
+
+	"publishConfig": {
+		"registry": "https://gitlab.com/api/v4/projects/12808292/packages/npm/",
+		"tag": "latest"
+	  },
+
+
 	"bugs": {
-		"url": "https://github.com/bycedric/semantic-release-expo/issues"
+		"url": "https://github.com/AlbertoLopSie/semantic-release-expo/issues"
 	},
 	"main": "./build/src/index.js",
 	"types": "./build/src/index.d.ts",
@@ -31,8 +40,8 @@
 		"build": "tsc --build",
 		"commit": "git-cz",
 		"prepare": "npm run build",
-		"prepack": "[ ! -f .buildme ] || npm run build",
-		"preinstall": "[ ! -f .buildme ] || npm run build"
+		"__prepack": "[ ! -f .buildme ] || npm run build",
+		"__preinstall": "[ ! -f .buildme ] || npm run build"
 	},
 	"dependencies": {
 		"detect-indent": "^6.0.0",
